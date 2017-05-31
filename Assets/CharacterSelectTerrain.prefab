@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4213896328549688}
   - component: {fileID: 218061577437159982}
   - component: {fileID: 154535687905797376}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CharacterSelectTerrain
-  m_TagString: Untagged
+  m_TagString: CharacterSelectTerrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
