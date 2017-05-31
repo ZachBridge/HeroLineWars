@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeroLineWars.Plugins", "HeroLineWars.Plugins.csproj", "{18F12D6D-1F56-F628-976C-E66A4F9B027A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeroLineWars", "HeroLineWars.csproj", "{CA65E9F3-21CA-B9E7-2637-50B4AAF581D5}"
