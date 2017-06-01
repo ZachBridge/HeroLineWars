@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeroLineWars.Plugins", "HeroLineWars.Plugins.csproj", "{18F12D6D-1F56-F628-976C-E66A4F9B027A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeroLineWars", "HeroLineWars.csproj", "{CA65E9F3-21CA-B9E7-2637-50B4AAF581D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeroLineWars.Editor.Plugins", "HeroLineWars.Editor.Plugins.csproj", "{915BB0F5-1EBA-6F7D-19D4-E789CE40D7E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18F12D6D-1F56-F628-976C-E66A4F9B027A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18F12D6D-1F56-F628-976C-E66A4F9B027A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18F12D6D-1F56-F628-976C-E66A4F9B027A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18F12D6D-1F56-F628-976C-E66A4F9B027A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA65E9F3-21CA-B9E7-2637-50B4AAF581D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA65E9F3-21CA-B9E7-2637-50B4AAF581D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA65E9F3-21CA-B9E7-2637-50B4AAF581D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA65E9F3-21CA-B9E7-2637-50B4AAF581D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{915BB0F5-1EBA-6F7D-19D4-E789CE40D7E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{915BB0F5-1EBA-6F7D-19D4-E789CE40D7E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{915BB0F5-1EBA-6F7D-19D4-E789CE40D7E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{915BB0F5-1EBA-6F7D-19D4-E789CE40D7E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
