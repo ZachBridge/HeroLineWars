@@ -88,7 +88,6 @@
     <Compile Include="Assets\Scripts\CameraMove.cs" />
     <Compile Include="Assets\Scripts\EnemyMove.cs" />
     <Compile Include="Assets\Scripts\EnemyMove2.cs" />
-    <Compile Include="Assets\Scripts\Old\EnemyMove.cs" />
     <Compile Include="Assets\Scripts\PlayerMovementNavMesh.cs" />
     <Compile Include="Assets\Scripts\SelectBuilding.cs" />
     <Compile Include="Assets\Scripts\Waypoints.cs" />
