@@ -11,6 +11,8 @@ TagManager:
   - Team2Spawn
   - Team1Portal
   - Team2Portal
+  - EnemyGround
+  - EnemyAir
   layers:
   - Default
   - TransparentFX
