@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//simple script to whichs just contains a few variables to which are used in other classes (build manager etc)
+// seriazble script that is used to store a object along with the price of it.
 [System.Serializable]
 public class EnemyBlueprint
 {
@@ -10,8 +10,5 @@ public class EnemyBlueprint
 
     public GameObject prefab;
     public int cost;
-
-    public GameObject upgradedPrefab;
-    public int upgradeCost;
 
 }
