@@ -11,41 +11,48 @@ public class Builder : MonoBehaviour {
     public EnemyBlueprint Enemy3;
     public EnemyBlueprint Enemy4;
     public EnemyBlueprint Enemy5;
+    public EnemyBlueprint Enemy6;
+    public EnemyBlueprint Enemy7;
+    public EnemyBlueprint Enemy8;
+    public EnemyBlueprint Enemy9;
+    public EnemyBlueprint Enemy10;
+    public EnemyBlueprint Enemy11;
+    public EnemyBlueprint Enemy12;
 
-    //BuildManager buildManger;
+    BuildManager buildManger;
 
-    //void Start()
-    //{
-    //    buildManger = BuildManager.instance;
-    //}
+    void Start()
+    {
+        buildManger = BuildManager.instance;
+    }
 
-    //public void SelectStandardTurret()
-    //{
-    //    Debug.Log("Standard Turret Selected");
-    //    buildManger.SelectTurretToBuild(standardTurret); // builds a turret from buildmanager
-    //}
+    public void SelectEnemy1()
+    {
+        Debug.Log("Enemy 1 Selected");
+        buildManger.selectEnemyToSpawn(Enemy1); // builds a turret from buildmanager
+    }
 
-    //public void SelectMissleLauncher()
-    //{
-    //    Debug.Log("Missle Turret Selected");
-    //    buildManger.SelectTurretToBuild(missleLauncher);
-    //}
+    public void SelectEnemy2()
+    {
+        Debug.Log("Enemy 2 Selected");
+        buildManger.selectEnemyToSpawn(Enemy2);
+    }
 
-    //public void SelectLaserBeamer()
-    //{
-    //    Debug.Log("Laser Beamer Selected");
-    //    buildManger.SelectTurretToBuild(laserBeamer);
-    //}
+    public void SelectEnemy3()
+    {
+        Debug.Log("Enemy 3 Selected");
+        buildManger.selectEnemyToSpawn(Enemy3);
+    }
 
-    //public void SelectAoeTurret()
-    //{
-    //    Debug.Log("AOE Turret Selected");
-    //    buildManger.SelectTurretToBuild(aoeTurret);
-    //}
+    public void SelectEnemy4()
+    {
+        Debug.Log("Enemy 4 Selected");
+        buildManger.selectEnemyToSpawn(Enemy4);
+    }
 
-    //public void SelectMoneyTurret()
-    //{
-    //    Debug.Log("Money Turret Selected");
-    //    buildManger.SelectTurretToBuild(moneyTurret);
-    //}
+    public void SelectEnemy5()
+    {
+        Debug.Log("Enemy 5 Selected");
+        buildManger.selectEnemyToSpawn(Enemy5);
+    }
 }
