@@ -6022,7 +6022,7 @@ GameObject:
   - component: {fileID: 1459803932}
   - component: {fileID: 1459803931}
   m_Layer: 5
-  m_Name: Bonus Sheild
+  m_Name: Max Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9062,7 +9062,7 @@ GameObject:
   - component: {fileID: 2108632380}
   - component: {fileID: 2108632379}
   m_Layer: 5
-  m_Name: Bonus Health
+  m_Name: Max Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
