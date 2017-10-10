@@ -7,8 +7,12 @@ public class BuildManager : MonoBehaviour {
 
     public static BuildManager instance; // used for storing a refernce to itself
 
+    public GameObject spawnLocation;
+    public GameObject spawnLocation2;
 
     private EnemyBlueprint enemyToSpawn; // variable that stores what turret will be set.
+
+
 
 
 
@@ -17,9 +21,10 @@ public class BuildManager : MonoBehaviour {
     
 
 
-    public void selectEnemyToSpawn(EnemyBlueprint enemy) //used for selecting turrets to build
+    public void SpawnSelectedEnemy(EnemyBlueprint enemy) //used for selecting turrets to build
     {
-        enemyToSpawn = enemy;
+        GameObject enemySpwaned = (GameObject)Instantiate(enemy.prefab, spawnLocation.transform.position, Quaternion.identity);
+        GameObject enemySpwaned2 = (GameObject)Instantiate(enemy.prefab, spawnLocation2.transform.position, Quaternion.identity);
     }
 
     // simple method to which calles the not enough money fader in the nodeUI allowing it show a visual representive of not having enough money
@@ -28,7 +33,7 @@ public class BuildManager : MonoBehaviour {
 
     }
 
-    public EnemyBlueprint GetTurretToBuild()
+    public EnemyBlueprint getEnemyToSpawn()
     {
         return enemyToSpawn;
     }
