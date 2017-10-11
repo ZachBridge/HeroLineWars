@@ -8,23 +8,28 @@ public class BuildManager : MonoBehaviour {
     public static BuildManager instance; // used for storing a refernce to itself
 
     public GameObject spawnLocation;
-    public GameObject spawnLocation2;
 
     private EnemyBlueprint enemyToSpawn; // variable that stores what turret will be set.
 
-
-
-
-
     public bool canSpawn { get { return enemyToSpawn != null; } } // variable can never be set, if turret to build returns not equal to null it'll return true, else it'll return false
-    // public bool HasMoney { get { return PlayerStats.Money >= turretToBuild.cost; } } // if we have enough money, return true.
-    
+                                                                  // public bool HasMoney { get { return PlayerStats.Money >= turretToBuild.cost; } } // if we have enough money, return true.
+
+    void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogError("more than one buildmanger in scene!");
+            return;
+        }
+
+        instance = this; // this build manager right here is going to be put into the refernce to instance, allowing a refernce to it to happen
+    }
 
 
     public void SpawnSelectedEnemy(EnemyBlueprint enemy) //used for selecting turrets to build
     {
-        GameObject enemySpwaned = (GameObject)Instantiate(enemy.prefab, spawnLocation.transform.position, Quaternion.identity);
-        GameObject enemySpwaned2 = (GameObject)Instantiate(enemy.prefab, spawnLocation2.transform.position, Quaternion.identity);
+        enemyToSpawn = enemy;
+        GameObject enemySpwaned = (GameObject)Instantiate(enemyToSpawn.prefab, spawnLocation.transform.position, Quaternion.identity);
     }
 
     // simple method to which calles the not enough money fader in the nodeUI allowing it show a visual representive of not having enough money
