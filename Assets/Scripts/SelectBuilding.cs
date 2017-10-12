@@ -1,29 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SelectBuilding : MonoBehaviour {
 
     private Renderer rend;
 
-    public GameObject enemy;
-    public GameObject spawnpoint;
+    public Canvas BuildingCanvas;
 
-    public bool isHit = false;
 
     private void Awake()
     {
         //mat = Resources.Load("mobspawnermat", typeof(Material)) as Material;
         rend = GetComponent<Renderer>();
-        enemy = GameObject.Find("Enemy1");
-        spawnpoint = GameObject.Find("Spawn1");
+        BuildingCanvas.enabled = false;
     }
 
     void Update()
     {
         BuildingSelected();
-        SpawnMob();
-
     }
 
     void BuildingSelected()
@@ -37,20 +33,21 @@ public class SelectBuilding : MonoBehaviour {
 
             if (hit)
             {
-                Debug.Log("Hit " + hitInfo.transform.gameObject.name);
-                if (hitInfo.transform.gameObject.tag == "MobSpawner")
+                if (hitInfo.transform.gameObject.tag == "Team1Building")
                 {
-                    Debug.Log("It's working!");
-                    isHit = true;
+                    Debug.Log("Hit " + hitInfo.transform.gameObject.name);
+                    BuildingCanvas.enabled = true;
                 }
                 else
                 {
-                    Debug.Log("nopz");
+                    BuildingCanvas.enabled = false;
+                    Debug.Log("I have hit, just not a building with the right tag");
                 }
             }
             else
             {
                 Debug.Log("No hit");
+                BuildingCanvas.enabled = false;
             }
             Debug.Log("Mouse is down");
         }
@@ -62,13 +59,6 @@ public class SelectBuilding : MonoBehaviour {
         rend.material.SetColor("mobspawnermat", Color.red);
     }
 
-    void SpawnMob()
-    {
-        if (isHit == true)
-        {
-            GameObject obj = Instantiate(enemy, spawnpoint.transform) as GameObject;
-        }
-    }
 }
 
 

@@ -6,7 +6,8 @@ using UnityEngine;
 public class Builder : MonoBehaviour {
 
 
-    public EnemyBlueprint Enemy1; 
+    public EnemyBlueprint Enemy1;
+    public EnemyBlueprint Enemy2;
 
     BuildManager buildManger; // sets buildmanager
 
@@ -19,6 +20,12 @@ public class Builder : MonoBehaviour {
     {
         Debug.Log("Enemy 1 Spawned");
         buildManger.SpawnSelectedEnemy(Enemy1);
+    }
+
+    public void SpawnEnemy2()
+    {
+        Debug.Log("Enemy 2 Spawned");
+        buildManger.SpawnSelectedEnemy(Enemy2);
     }
 
 }
