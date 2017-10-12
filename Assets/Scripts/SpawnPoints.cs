@@ -7,15 +7,13 @@ public class SpawnPoints : MonoBehaviour
 {
     // script used for controlling the spawn locations of flying and ground
     // allowing it to be randomized
-    [Header("Flying SpawnPoint Information")]
+    [Header("Team One SpawnPoint Information")]
     public static Transform[] spawnLocationsTeamOne; // contains all the current spawnPoints on the map
-    private int spawnPointIndexTeamOne;// contains the number
     private int spawnPointNumberTeamOne = 0;
     private int spawnPointCounterTeamOne = 0;
 
-    [Header("Ground SpawnPoint Information")]
-    public Transform[] spawnLocationsTeamTwo; // contains all the current spawnPoints on the map
-    private int spawnPointIndexTeamTwo;// contains the number
+    [Header("Team Two SpawnPoint Information")]
+    public static Transform[] spawnLocationsTeamTwo; // contains all the current spawnPoints on the map
     private int spawnPointNumberTeamTwo = 0;
     private int spawnPointCounterTeamTwo = 0;
 
@@ -45,16 +43,17 @@ public class SpawnPoints : MonoBehaviour
         {
             Transform child = transform.GetChild(i);
 
-            if (child.tag == "SpawnPointGround")
-            {
-                spawnLocationsTeamTwo[spawnPointNumberTeamTwo] = transform.GetChild(i);
-                spawnPointNumberTeamTwo++;
-            }
-            if (child.tag == "SpawnPointFlying")
+            if (child.tag == "SpawnPointTeamOne")
             {
                 spawnLocationsTeamOne[spawnPointNumberTeamOne] = transform.GetChild(i);
                 spawnPointNumberTeamOne++;
             }
+            if (child.tag == "SpawnPointTeamTwo")
+            {
+                spawnLocationsTeamTwo[spawnPointNumberTeamTwo] = transform.GetChild(i);
+                spawnPointNumberTeamTwo++;
+            }
+            
         }
     }
 

@@ -7,8 +7,6 @@ public class BuildManager : MonoBehaviour {
 
     public static BuildManager instance; // used for storing a refernce to itself
 
-    public GameObject spawnLocation;
-
     private EnemyBlueprint enemyToSpawn; // variable that stores what turret will be set.
 
     public bool canSpawn { get { return enemyToSpawn != null; } } // variable can never be set, if turret to build returns not equal to null it'll return true, else it'll return false
@@ -29,7 +27,16 @@ public class BuildManager : MonoBehaviour {
     public void SpawnSelectedEnemy(EnemyBlueprint enemy) //used for selecting turrets to build
     {
         enemyToSpawn = enemy;
-        GameObject enemySpwaned = (GameObject)Instantiate(enemyToSpawn.prefab, spawnLocation.transform.position, Quaternion.identity);
+
+        // TODO - Make it so it can differenciate between which players spawned them and send in the right spawners
+        // Currently just spawns in both portals of team 1
+        for (int i = 0; i < SpawnPoints.spawnLocationsTeamOne.Length; i++)
+        {
+            GameObject enemySpwaned = (GameObject)Instantiate(enemyToSpawn.prefab, SpawnPoints.spawnLocationsTeamOne[i].position, Quaternion.identity);
+        }
+
+
+        
     }
 
     // simple method to which calles the not enough money fader in the nodeUI allowing it show a visual representive of not having enough money
