@@ -17,6 +17,7 @@ TagManager:
   - SpawnPointTeamOnePortalTwo
   - SpawnPointTeamTwoPortalOne
   - SpawnPointTeamTwoPortalTwo
+  - Waypoint
   layers:
   - Default
   - TransparentFX

@@ -43,7 +43,7 @@ public class SpawnPoints : MonoBehaviour
         {
             Transform child = transform.GetChild(i);
 
-            if (child.tag == "SpawnPointTeamOnePortalOne")
+            if (child.tag == "SpawnPointTeamOnePortalOne" || child.tag == "SpawnPointTeamOnePortalTwo")
             {
                 spawnLocationsTeamOne[spawnPointNumberTeamOne] = transform.GetChild(i);
                 spawnPointNumberTeamOne++;
