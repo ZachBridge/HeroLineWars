@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
+
 
 public class SelectBuilding : MonoBehaviour {
 
@@ -26,30 +28,33 @@ public class SelectBuilding : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0))
         {
+
             Debug.Log("Mouse is down");
 
             RaycastHit hitInfo = new RaycastHit();
             bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
-
-            if (hit)
+            if (!EventSystem.current.IsPointerOverGameObject())
             {
-                if (hitInfo.transform.gameObject.tag == "Team1Building")
+                if (hit)
                 {
-                    Debug.Log("Hit " + hitInfo.transform.gameObject.name);
-                    BuildingCanvas.enabled = true;
+                    if (hitInfo.transform.gameObject.tag == "Team1Building")
+                    {
+                        Debug.Log("Hit " + hitInfo.transform.gameObject.name);
+                        BuildingCanvas.enabled = true;
+                    }
+                    else
+                    {
+                        BuildingCanvas.enabled = false;
+                        Debug.Log("I have hit, just not a building with the right tag");
+                    }
                 }
                 else
                 {
+                    Debug.Log("No hit");
                     BuildingCanvas.enabled = false;
-                    Debug.Log("I have hit, just not a building with the right tag");
                 }
+                Debug.Log("Mouse is down");
             }
-            else
-            {
-                Debug.Log("No hit");
-                BuildingCanvas.enabled = false;
-            }
-            Debug.Log("Mouse is down");
         }
     }
 
