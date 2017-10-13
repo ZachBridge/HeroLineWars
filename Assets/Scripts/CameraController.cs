@@ -8,7 +8,7 @@ public class CameraController : MonoBehaviour {
 
     public float scrollSpeed = 75f;
     public float minY = 20f;
-    public float maxY = 120f;
+    public float maxY = 200f;
 
     public Vector2 panLimit;
 	
@@ -18,22 +18,22 @@ public class CameraController : MonoBehaviour {
         //Save camera location
         Vector3 pos = transform.position;
 
-        if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - panBorderThickness)
+        if (Input.GetKey("w") || Input.GetKey("up")  || Input.mousePosition.y >= Screen.height - panBorderThickness)
         {   //Move in the specified direction by the amount specified in the variable. Time.deltatime to ensure updating is consistent
             pos.x -= panSpeed * Time.deltaTime;
         }
 
-        if (Input.GetKey("s") || Input.mousePosition.y <= panBorderThickness)
+        if (Input.GetKey("s") || Input.GetKey("down") || Input.mousePosition.y <= panBorderThickness)
         {   //Move in the specified direction by the amount specified in the variable. Time.deltatime to ensure updating is consistent
             pos.x += panSpeed * Time.deltaTime;
         }
 
-        if (Input.GetKey("d") || Input.mousePosition.x >= Screen.width - panBorderThickness)
+        if (Input.GetKey("d") || Input.GetKey("right") || Input.mousePosition.x >= Screen.width - panBorderThickness)
         {   //Move in the specified direction by the amount specified in the variable. Time.deltatime to ensure updating is consistent
             pos.z += panSpeed * Time.deltaTime;
         }
 
-        if (Input.GetKey("a") || Input.mousePosition.x <= panBorderThickness)
+        if (Input.GetKey("a") || Input.GetKey("left") || Input.mousePosition.x <= panBorderThickness)
         {   //Move in the specified direction by the amount specified in the variable. Time.deltatime to ensure updating is consistent
             pos.z -= panSpeed * Time.deltaTime;
         }

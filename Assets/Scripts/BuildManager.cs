@@ -9,6 +9,8 @@ public class BuildManager : MonoBehaviour {
 
     private EnemyBlueprint enemyToSpawn; // variable that stores what turret will be set.
 
+    public string location;
+
     public bool canSpawn { get { return enemyToSpawn != null; } } // variable can never be set, if turret to build returns not equal to null it'll return true, else it'll return false
                                                                   // public bool HasMoney { get { return PlayerStats.Money >= turretToBuild.cost; } } // if we have enough money, return true.
 
@@ -33,6 +35,8 @@ public class BuildManager : MonoBehaviour {
         for (int i = 0; i < SpawnPoints.spawnLocationsTeamOne.Length; i++)
         {
             GameObject enemySpwaned = (GameObject)Instantiate(enemyToSpawn.prefab, SpawnPoints.spawnLocationsTeamOne[i].position, Quaternion.identity);
+            location = SpawnPoints.spawnLocationsTeamOne[i].name;
+            Debug.Log("I have spawned at: " + SpawnPoints.spawnLocationsTeamOne[i].name);
         }
 
 

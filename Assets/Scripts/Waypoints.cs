@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Waypoints : MonoBehaviour {
 
-    public static Transform[] points;
+    public static Transform[] points; // Team One Portal Two
+
 
     void Awake()
     {
@@ -13,7 +14,6 @@ public class Waypoints : MonoBehaviour {
         {
             points[i] = transform.GetChild(i);
         }
-        
-    }
+   }
 
 }

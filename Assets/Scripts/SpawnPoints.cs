@@ -24,17 +24,17 @@ public class SpawnPoints : MonoBehaviour
         {
             Transform child = transform.GetChild(i);
 
-            if (child.tag == "SpawnPointTeamOne")
+            if (child.tag == "SpawnPointTeamOnePortalOne" || child.tag == "SpawnPointTeamOnePortalTwo")
             {
                 spawnPointCounterTeamOne++;
             }
-            if (child.tag == "SpawnPointTeamTwo")
+            if (child.tag == "SpawnPointTeamTwoPortalOne" || child.tag == "SpawnPointTeamTwoPortalTwo")
             {
                 spawnPointCounterTeamTwo++;
             }
         }
 
-        //creates teh correct amount of array holders due to the previous method
+        //creates the correct amount of array holders due to the previous method
         spawnLocationsTeamOne = new Transform[spawnPointCounterTeamOne];
         spawnLocationsTeamTwo = new Transform[spawnPointCounterTeamTwo];
         
@@ -43,7 +43,7 @@ public class SpawnPoints : MonoBehaviour
         {
             Transform child = transform.GetChild(i);
 
-            if (child.tag == "SpawnPointTeamOne")
+            if (child.tag == "SpawnPointTeamOnePortalOne")
             {
                 spawnLocationsTeamOne[spawnPointNumberTeamOne] = transform.GetChild(i);
                 spawnPointNumberTeamOne++;
