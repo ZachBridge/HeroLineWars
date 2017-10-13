@@ -33,7 +33,8 @@ public class SelectBuilding : MonoBehaviour {
 
             RaycastHit hitInfo = new RaycastHit();
             bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
-            if (!EventSystem.current.IsPointerOverGameObject())
+
+            if (!EventSystem.current.IsPointerOverGameObject()) // if anything OTHER than canvas is clicked, then do this
             {
                 if (hit)
                 {
