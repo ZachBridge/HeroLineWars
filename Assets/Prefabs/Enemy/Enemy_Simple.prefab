@@ -174,10 +174,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89df1952c21377b449147495f78d8efe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyScript: {fileID: 0}
   speed: 50
-  enemy: {fileID: 0}
-  spawn1: {fileID: 0}
+  target: {fileID: 0}
+  range: 2000
 --- !u!114 &114620993882025856
 MonoBehaviour:
   m_ObjectHideFlags: 1
