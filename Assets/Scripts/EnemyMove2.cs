@@ -11,17 +11,17 @@ public class EnemyMove2 : MonoBehaviour {
     private int wavepointIndex = 0;
 
     public Transform target; // used for storing current target 
+    public bool upgradeTarget = false;
 
-    public GameObject currentWaypoint;
-
-    
+    public Transform currentWaypoint;
+    public Transform previousWaypoint;  
 
     public float range = 50f; //range of how far turrent can attack.
 
 
     void Start()
-    {   
-        InvokeRepeating("UpdateTarget", 0f, 0.5f); // instantly search for a target, then checky every 0.5seconds
+    {
+        UpdateTarget();
     }
 
     private void Update()
@@ -33,10 +33,12 @@ public class EnemyMove2 : MonoBehaviour {
         }
 
 
-        //if (Vector3.Distance(transform.position, target.position) <= 0.4f) // If enemy is within a set proximity of next waypoint, set next waypoint
-        //{
-        //    UpdateTarget(); // Calls the next waypoint
-        //}
+        if (Vector3.Distance(transform.position, target.position) <= 5f) // If enemy is within a set proximity of next waypoint, set next waypoint
+        {
+            previousWaypoint = target;
+            upgradeTarget = true;
+            UpdateTarget(); // Calls the next waypoint
+        }
 
     }
 
@@ -50,12 +52,21 @@ public class EnemyMove2 : MonoBehaviour {
         {
             float distanceToWaypoint = Vector3.Distance(transform.position, Waypoints.transform.position); // get distance from current turret to enemy
 
-            if (distanceToWaypoint < shortestDistance) // if distance is shorter then current shortest distance, change the shortest distance to the new one and set this enemy as closest new enemy
+            if (upgradeTarget)
+            {
+                if (distanceToWaypoint > 5 && distanceToWaypoint < 1000 &&  target != previousWaypoint)
+                {
+                    shortestDistance = distanceToWaypoint;
+                    nearestWaypoint = Waypoints;
+                }
+            }else if (distanceToWaypoint < shortestDistance) // if distance is shorter then current shortest distance, change the shortest distance to the new one and set this enemy as closest new enemy
             {
                 shortestDistance = distanceToWaypoint;
                 nearestWaypoint = Waypoints;
             }
+
             SetNextLocation(nearestWaypoint, shortestDistance); // sends over the variables, sets the next batch.
+            currentWaypoint = target;
         }
     }
 
