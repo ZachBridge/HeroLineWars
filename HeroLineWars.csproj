@@ -90,8 +90,7 @@
     <Compile Include="Assets\Scripts\CameraMove.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemyBlueprint.cs" />
-    <Compile Include="Assets\Scripts\EnemyMove.cs" />
-    <Compile Include="Assets\Scripts\EnemyMove2.cs" />
+    <Compile Include="Assets\Scripts\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerMovementNavMesh.cs" />
     <Compile Include="Assets\Scripts\SelectBuilding.cs" />
     <Compile Include="Assets\Scripts\SpawnPoints.cs" />

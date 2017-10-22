@@ -174,8 +174,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89df1952c21377b449147495f78d8efe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
   target: {fileID: 0}
+  upgradeTarget: 0
+  currentWaypoint: {fileID: 0}
+  previousWaypoint: {fileID: 0}
+  secondPreviousWaypoint: {fileID: 0}
   range: 2000
 --- !u!114 &114620993882025856
 MonoBehaviour:
@@ -252,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f37b66aa496e4e846aba9d81179e3b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: 10
+  startSpeed: 50
   speed: 0
   startHealth: 100
   worth: 50
