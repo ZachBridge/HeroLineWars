@@ -178,7 +178,8 @@ MonoBehaviour:
   upgradeTarget: 0
   currentWaypoint: {fileID: 0}
   previousWaypoint: {fileID: 0}
-  secondPreviousWaypoint: {fileID: 0}
+  waypoints: []
+  toRemoveWaypoint: {fileID: 0}
   range: 2000
 --- !u!114 &114620993882025856
 MonoBehaviour:
@@ -349,16 +350,16 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1828965568454282}
-  m_LocalRotation: {x: 0.3420201, y: 0, z: 0, w: 0.9396927}
+  m_LocalRotation: {x: 0.24184473, y: -0.66446304, z: 0.24184473, w: 0.66446304}
   m_LocalPosition: {x: 0, y: 0, z: -0.015}
   m_LocalScale: {x: 0.0015, y: 0.0015, z: 0.0015}
   m_Children:
   - {fileID: 224402368251437022}
   m_Father: {fileID: 4116840270545870}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 40, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 40, y: -90, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -0.23, y: 1}
   m_SizeDelta: {x: 1146, y: 534}
   m_Pivot: {x: 0.5, y: 0.5}

@@ -29,13 +29,14 @@ public class BuildManager : MonoBehaviour {
     public void SpawnSelectedEnemy(EnemyBlueprint enemy) //used for selecting turrets to build
     {
         enemyToSpawn = enemy;
-
+        
+        int i = Random.Range(0,2); // the second number is exclusive, meaning it wont ever be called so it will call 0 or 1 in this case
+        
         // TODO - Make it so it can differenciate between which players spawned them and send in the right spawners
         // Currently just spawns in both portals of team 1
-        for (int i = 0; i < SpawnPoints.spawnLocationsTeamOne.Length; i++)
-        {
+
             GameObject enemySpwaned = (GameObject)Instantiate(enemyToSpawn.prefab, SpawnPoints.spawnLocationsTeamOne[i].position, Quaternion.identity);
-        }
+  
 
 
         
