@@ -31,6 +31,7 @@ public class BuildManager : MonoBehaviour {
         enemyToSpawn = enemy;
         
         int i = Random.Range(0,2); // the second number is exclusive, meaning it wont ever be called so it will call 0 or 1 in this case
+        Debug.Log("I have spawned at SpawnPoint: " + i);
         
         // TODO - Make it so it can differenciate between which players spawned them and send in the right spawners
         // Currently just spawns in both portals of team 1

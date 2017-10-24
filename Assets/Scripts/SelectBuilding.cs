@@ -10,6 +10,7 @@ public class SelectBuilding : MonoBehaviour {
     private Renderer rend;
 
     public Canvas BuildingCanvas;
+    public Canvas CharcterCanvas;
 
 
     private void Awake()
@@ -17,6 +18,7 @@ public class SelectBuilding : MonoBehaviour {
         //mat = Resources.Load("mobspawnermat", typeof(Material)) as Material;
         rend = GetComponent<Renderer>();
         BuildingCanvas.enabled = false;
+        CharcterCanvas.enabled = true;
     }
 
     void Update()
@@ -42,16 +44,19 @@ public class SelectBuilding : MonoBehaviour {
                     {
                         Debug.Log("Hit " + hitInfo.transform.gameObject.name);
                         BuildingCanvas.enabled = true;
+                        CharcterCanvas.enabled = false;
                     }
                     else
                     {
                         BuildingCanvas.enabled = false;
+                        CharcterCanvas.enabled = true;
                         Debug.Log("I have hit, just not a building with the right tag");
                     }
                 }
                 else
                 {
                     Debug.Log("No hit");
+                    CharcterCanvas.enabled = true;
                     BuildingCanvas.enabled = false;
                 }
                 Debug.Log("Mouse is down");

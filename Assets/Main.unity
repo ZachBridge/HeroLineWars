@@ -202,6 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BuildingCanvas: {fileID: 1907297705}
+  CharcterCanvas: {fileID: 2140839342}
 --- !u!23 &25885433
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -725,6 +726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BuildingCanvas: {fileID: 1907297705}
+  CharcterCanvas: {fileID: 2140839342}
 --- !u!23 &112750939
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2382,6 +2384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BuildingCanvas: {fileID: 1907297705}
+  CharcterCanvas: {fileID: 2140839342}
 --- !u!23 &528684762
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3306,48 +3309,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 687361207}
---- !u!1001 &700949341
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4116840270545870, guid: 11ad3d29b424947468bbc2a0ea9afa7f, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 2120
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116840270545870, guid: 11ad3d29b424947468bbc2a0ea9afa7f, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116840270545870, guid: 11ad3d29b424947468bbc2a0ea9afa7f, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 936
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116840270545870, guid: 11ad3d29b424947468bbc2a0ea9afa7f, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116840270545870, guid: 11ad3d29b424947468bbc2a0ea9afa7f, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116840270545870, guid: 11ad3d29b424947468bbc2a0ea9afa7f, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116840270545870, guid: 11ad3d29b424947468bbc2a0ea9afa7f, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116840270545870, guid: 11ad3d29b424947468bbc2a0ea9afa7f, type: 2}
-      propertyPath: m_RootOrder
-      value: 14
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 11ad3d29b424947468bbc2a0ea9afa7f, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &723863078
 GameObject:
   m_ObjectHideFlags: 0
@@ -3422,53 +3383,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 723863078}
---- !u!1001 &749217772
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4116840270545870, guid: d140936bd072f94489e39674973a7ae5, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 2108.0764
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116840270545870, guid: d140936bd072f94489e39674973a7ae5, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.000030517578
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116840270545870, guid: d140936bd072f94489e39674973a7ae5, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 934.83887
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116840270545870, guid: d140936bd072f94489e39674973a7ae5, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116840270545870, guid: d140936bd072f94489e39674973a7ae5, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116840270545870, guid: d140936bd072f94489e39674973a7ae5, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116840270545870, guid: d140936bd072f94489e39674973a7ae5, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116840270545870, guid: d140936bd072f94489e39674973a7ae5, type: 2}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 224472832382108378, guid: d140936bd072f94489e39674973a7ae5,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.23
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: d140936bd072f94489e39674973a7ae5, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &751361851
 Prefab:
   m_ObjectHideFlags: 0
@@ -6014,13 +5928,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1129209757}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.31764707, g: 0.31764707, b: 0.31764707, a: 0.40784314}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -6136,6 +6050,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BuildingCanvas: {fileID: 1907297705}
+  CharcterCanvas: {fileID: 2140839342}
 --- !u!23 &1140702470
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7226,6 +7141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BuildingCanvas: {fileID: 1907297705}
+  CharcterCanvas: {fileID: 2140839342}
 --- !u!23 &1380535357
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8770,6 +8686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BuildingCanvas: {fileID: 1907297705}
+  CharcterCanvas: {fileID: 2140839342}
 --- !u!23 &1850791354
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8989,6 +8906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BuildingCanvas: {fileID: 1907297705}
+  CharcterCanvas: {fileID: 2140839342}
 --- !u!23 &1894508702
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9366,6 +9284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BuildingCanvas: {fileID: 1907297705}
+  CharcterCanvas: {fileID: 2140839342}
 --- !u!23 &1990018613
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9965,7 +9884,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2140839340
 MonoBehaviour:
   m_ObjectHideFlags: 0
