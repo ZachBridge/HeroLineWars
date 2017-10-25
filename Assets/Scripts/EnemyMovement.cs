@@ -7,9 +7,6 @@ public class EnemyMovement : MonoBehaviour {
 
     private Enemy enemy;
 
-    //private Transform target;
-    private int wavepointIndex = 0;
-
     public Transform target; // used for storing current target 
     public bool upgradeTarget = false;
 
@@ -112,7 +109,7 @@ public class EnemyMovement : MonoBehaviour {
     void LockOnTarget()
     {
         //target lock-on
-        Vector3 dir = target.position - transform.position; // figures out distance between target and ourselves
+        //Vector3 dir = target.position - transform.position; // figures out distance between target and ourselves
         //Quaternion lookRotation = Quaternion.LookRotation(dir); // set its look destination to be the direction to target
         //Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles; // converted to eulerangles & we want to smoothly rotate to new target over time.
         //partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f); // rotate only around the Y axis
