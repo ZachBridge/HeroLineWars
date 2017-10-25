@@ -9,8 +9,6 @@ public class BuildManager : MonoBehaviour {
 
     private EnemyBlueprint enemyToSpawn; // variable that stores what turret will be set.
 
-    public string location;
-
     public bool canSpawn { get { return enemyToSpawn != null; } } // variable can never be set, if turret to build returns not equal to null it'll return true, else it'll return false
     // public bool HasMoney { get { return PlayerStats.Money >= turretToBuild.cost; } } // if we have enough money, return true.
 

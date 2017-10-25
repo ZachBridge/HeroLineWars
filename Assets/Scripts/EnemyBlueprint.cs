@@ -9,6 +9,7 @@ public class EnemyBlueprint
     //Maybe attach a range indicator to a turret blueprint as a seperate object.
 
     public GameObject prefab;
-    //public int cost;
+    public int cost;
+    public int incomeUpgrade;
 
 }

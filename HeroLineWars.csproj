@@ -95,6 +95,7 @@
     <Compile Include="Assets\Scripts\SelectBuilding.cs" />
     <Compile Include="Assets\Scripts\SpawnPoints.cs" />
     <Compile Include="Assets\Scripts\Waypoints.cs" />
+    <Compile Include="Assets\Scripts\playerStats.cs" />
     <Compile Include="Assets\TheTopicbirdTools\ToDoList\ToDoList.cs" />
   </ItemGroup>
   <ItemGroup>
