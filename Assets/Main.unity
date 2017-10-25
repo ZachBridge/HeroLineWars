@@ -6923,6 +6923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: debcdd965388aac4283cedc8a0e8492e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1275968216}
 --- !u!114 &1267393686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6941,8 +6942,8 @@ MonoBehaviour:
     incomeUpgrade: 5
   Enemy2:
     prefab: {fileID: 1511349047025312, guid: d140936bd072f94489e39674973a7ae5, type: 2}
-    cost: 0
-    incomeUpgrade: 0
+    cost: 10
+    incomeUpgrade: 10
 --- !u!1001 &1272749068
 Prefab:
   m_ObjectHideFlags: 0
@@ -7069,7 +7070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Money: 0
-  StartMoney: 400
+  StartMoney: 0
   MoneyGenerationAmount: 0
   moneyPerText: {fileID: 148373189}
   moneyText: {fileID: 1244196928}

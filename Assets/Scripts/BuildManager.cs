@@ -7,6 +7,8 @@ public class BuildManager : MonoBehaviour {
 
     public static BuildManager instance; // used for storing a refernce to itself
 
+    public playerStats player;
+
     private EnemyBlueprint enemyToSpawn; // variable that stores what turret will be set.
 
     public bool canSpawn { get { return enemyToSpawn != null; } } // variable can never be set, if turret to build returns not equal to null it'll return true, else it'll return false
@@ -28,13 +30,23 @@ public class BuildManager : MonoBehaviour {
     {
         enemyToSpawn = enemy;
         
+        if (player.Money < enemy.cost)
+        {
+            Debug.Log("You don't have enough money friend");
+            return;
+        }
+
+        player.MoneyGenerationIncrease(enemy.incomeUpgrade); // increases the amount of money per 5 seconds the player gains by the amount the minion is worth
+        player.Money -= enemy.cost; // deducts money to the price of the enemy
+
+
         int i = Random.Range(0,2); // the second number is exclusive, meaning it wont ever be called so it will call 0 or 1 in this case
         Debug.Log("I have spawned at SpawnPoint: " + i);
         
         // TODO - Make it so it can differenciate between which players spawned them and send in the right spawners
         // Currently just spawns in both portals of team 1
 
-            GameObject enemySpwaned = (GameObject)Instantiate(enemyToSpawn.prefab, SpawnPoints.spawnLocationsTeamOne[i].position, Quaternion.identity);
+        GameObject enemySpwaned = (GameObject)Instantiate(enemyToSpawn.prefab, SpawnPoints.spawnLocationsTeamOne[i].position, Quaternion.identity);
   
 
 

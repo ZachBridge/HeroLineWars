@@ -5,7 +5,6 @@ using UnityEngine;
 // used for sending over the premade prefab turret that has been selected to the build manager.
 public class Builder : MonoBehaviour {
 
-    public playerStats player;
     public EnemyBlueprint Enemy1;
     public EnemyBlueprint Enemy2;
 
@@ -20,7 +19,7 @@ public class Builder : MonoBehaviour {
     {
         Debug.Log("Enemy 1 Spawned");
         buildManger.SpawnSelectedEnemy(Enemy1);
-        player.MoneyGenerationIncrease(Enemy1.incomeUpgrade);
+        
     }
 
     public void SpawnEnemy2()
